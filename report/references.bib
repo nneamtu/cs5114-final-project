@@ -1,0 +1,136 @@
+@misc{openflow,
+  title = {Openflow},
+  url   = {http://www.openflowswitch.org}
+}
+
+@misc{pox,
+  title = {POX},
+  url   = {https://noxrepo.github.io/pox-doc/html/}
+}
+
+@inproceedings{corybantic,
+  author    = {Mogul, Jeffrey C. and AuYoung, Alvin and Banerjee, Sujata and Popa, Lucian and Lee, Jeongkeun and Mudigonda, Jayaram and Sharma, Puneet and Turner, Yoshio},
+  title     = {Corybantic: Towards the Modular Composition of SDN Control Programs},
+  year      = {2013},
+  isbn      = {9781450325967},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  abstract  = {Software-Defined Networking (SDN) promises to enable vigorous innovation, through separation of the control plane from the data plane, and to enable novel forms of network management, through a controller that uses a global view to make globally-valid decisions. The design of SDN controllers creates novel challenges; much previous work has focused on making them scalable, reliable, and efficient.However, prior work has ignored the problem that multiple controller functions may be competing for resources (e.g., link bandwidth or switch table slots). Our Corybantic design supports modular composition of independent controller modules, which manage different aspects of the network while competing for resources. Each module tries to optimize one or more objective functions; we address the challenge of how to coordinate between these modules to maximize the overall value delivered by the controllers' decisions, while still achieving modularity.},
+  booktitle = {Proceedings of the Twelfth ACM Workshop on Hot Topics in Networks},
+  articleno = {1},
+  numpages  = {7},
+  keywords  = {software-defined networking},
+  location  = {College Park, Maryland},
+  series    = {HotNets-XII}
+}
+
+@inproceedings{participatory_networking,
+  author    = {Ferguson, Andrew D. and Guha, Arjun and Liang, Chen and Fonseca, Rodrigo and Krishnamurthi, Shriram},
+  title     = {Participatory Networking: An API for Application Control of SDNs},
+  year      = {2013},
+  isbn      = {9781450320566},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  abstract  = {We present the design, implementation, and evaluation of an API for applications to control a software-defined network (SDN). Our API is implemented by an OpenFlow controller that delegates read and write authority from the network's administrators to end users, or applications and devices acting on their behalf. Users can then work with the network, rather than around it, to achieve better performance, security, or predictable behavior. Our API serves well as the next layer atop current SDN stacks. Our design addresses the two key challenges: how to safely decompose control and visibility of the network, and how to resolve conflicts between untrusted users and across requests, while maintaining baseline levels of fairness and security. Using a real OpenFlow testbed, we demonstrate our API's feasibility through microbenchmarks, and its usefulness by experiments with four real applications modified to take advantage of it.},
+  booktitle = {Proceedings of the ACM SIGCOMM 2013 Conference on SIGCOMM},
+  pages     = {327–338},
+  numpages  = {12},
+  keywords  = {software-defined networks, openflow, participatory networking},
+  location  = {Hong Kong, China},
+  series    = {SIGCOMM '13}
+}
+
+@inproceedings{frenetic1,
+  author    = {Foster, Nate and Freedman, Michael J. and Harrison, Rob and Rexford, Jennifer and Meola, Matthew L. and Walker, David},
+  title     = {Frenetic: A High-Level Language for OpenFlow Networks},
+  year      = {2010},
+  isbn      = {9781450304672},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  abstract  = {Most interfaces for programming network devices are defined at the low level of abstraction supported by the underlying hardware, which leads to complicated programs that are prone to errors. This paper proposes a high-level programming language for OpenFlow networks based on ideas originally developed in the functional programming community. Our language, called Frenetic, includes a rich pattern algebra for classifying packets, a "program like you see every packet" abstraction, and a run-time system that automatically generates the low-level packet-processing rules. We describe the design and implementation of Frenetic, and show how to use it to implement common management tasks.},
+  booktitle = {Proceedings of the Workshop on Programmable Routers for Extensible Services of Tomorrow},
+  articleno = {6},
+  numpages  = {6},
+  location  = {Philadelphia, Pennsylvania},
+  series    = {PRESTO '10}
+}
+
+@inproceedings{frenetic2,
+  author    = {Foster, Nate and Harrison, Rob and Freedman, Michael J. and Monsanto, Christopher and Rexford, Jennifer and Story, Alec and Walker, David},
+  title     = {Frenetic: A Network Programming Language},
+  year      = {2011},
+  isbn      = {9781450308656},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  abstract  = {Modern networks provide a variety of interrelated services including routing, traffic monitoring, load balancing, and access control. Unfortunately, the languages used to program today's networks lack modern features - they are usually defined at the low level of abstraction supplied by the underlying hardware and they fail to provide even rudimentary support for modular programming. As a result, network programs tend to be complicated, error-prone, and difficult to maintain.This paper presents Frenetic, a high-level language for programming distributed collections of network switches. Frenetic provides a declarative query language for classifying and aggregating network traffic as well as a functional reactive combinator library for describing high-level packet-forwarding policies. Unlike prior work in this domain, these constructs are - by design - fully compositional, which facilitates modular reasoning and enables code reuse. This important property is enabled by Frenetic's novel run-time system which manages all of the details related to installing, uninstalling, and querying low-level packet-processing rules on physical switches.Overall, this paper makes three main contributions: (1) We analyze the state-of-the art in languages for programming networks and identify the key limitations; (2) We present a language design that addresses these limitations, using a series of examples to motivate and validate our choices; (3) We describe an implementation of the language and evaluate its performance on several benchmarks.},
+  booktitle = {Proceedings of the 16th ACM SIGPLAN International Conference on Functional Programming},
+  pages     = {279–291},
+  numpages  = {13},
+  keywords  = {openflow, domain-specific languages, network programming languages, functional reactive programming},
+  location  = {Tokyo, Japan},
+  series    = {ICFP '11}
+}
+
+@inproceedings{pyretic,
+  author    = {Monsanto, Christopher and Reich, Joshua and Foster, Nate and Rexford, Jennifer and Walker, David},
+  title     = {Composing Software-Defined Networks},
+  year      = {2013},
+  publisher = {USENIX Association},
+  address   = {USA},
+  abstract  = {Managing a network requires support for multiple concurrent tasks, from routing and traffic monitoring, to access control and server load balancing. Software-Defined Networking (SDN) allows applications to realize these tasks directly, by installing packet-processing rules on switches. However, today's SDN platforms provide limited support for creating modular applications. This paper introduces new abstractions for building applications out of multiple, independent modules that jointly manage network traffic. First, we define composition operators and a library of policies for forwarding and querying traffic. Our parallel composition operator allows multiple policies to operate on the same set of packets, while a novel sequential composition operator allows one policy to process packets after another. Second, we enable each policy to operate on an abstract topology that implicitly constrains what the module can see and do. Finally, we define a new abstract packet model that allows programmers to extend packets with virtual fields that may be used to associate packets with high-level meta-data. We realize these abstractions in Pyretic, an imperative, domain-specific language embedded in Python.},
+  booktitle = {Proceedings of the 10th USENIX Conference on Networked Systems Design and Implementation},
+  pages     = {1–14},
+  numpages  = {14},
+  location  = {Lombard, IL},
+  series    = {nsdi'13}
+}
+
+@inproceedings{netcore,
+  author    = {Monsanto, Christopher and Foster, Nate and Harrison, Rob and Walker, David},
+  title     = {A Compiler and Run-Time System for Network Programming Languages},
+  year      = {2012},
+  isbn      = {9781450310833},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  abstract  = {Software-defined networks (SDNs) are a new kind of network architecture in which a controller machine manages a distributed collection of switches by instructing them to install or uninstall packet-forwarding rules and report traffic statistics. The recently formed Open Networking Consortium, whose members include Google, Facebook, Microsoft, Verizon, and others, hopes to use this architecture to transform the way that enterprise and data center networks are implemented.In this paper, we define a high-level, declarative language, called NetCore, for expressing packet-forwarding policies on SDNs. NetCore is expressive, compositional, and has a formal semantics. To ensure that a majority of packets are processed efficiently on switches---instead of on the controller---we present new compilation algorithms for NetCore and couple them with a new run-time system that issues rule installation commands and traffic-statistics queries to switches. Together, the compiler and run-time system generate efficient rules whenever possible and outperform the simple, manual techniques commonly used to program SDNs today. In addition, the algorithms we develop are generic, assuming only that the packet-matching capabilities available on switches satisfy some basic algebraic laws.Overall, this paper delivers a new design for a high-level network programming language; an improved set of compiler algorithms; a new run-time system for SDN architectures; the first formal semantics and proofs of correctness in this domain; and an implementation and evaluation that demonstrates the performance benefits over traditional manual techniques.},
+  booktitle = {Proceedings of the 39th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+  pages     = {217–230},
+  numpages  = {14},
+  keywords  = {frenetic, domain specific languages, software-defined networking, network programming languages, openflow},
+  location  = {Philadelphia, PA, USA},
+  series    = {POPL '12}
+}
+
+@inproceedings{netkat,
+  author    = {Anderson, Carolyn Jane and Foster, Nate and Guha, Arjun and Jeannin, Jean-Baptiste and Kozen, Dexter and Schlesinger, Cole and Walker, David},
+  title     = {NetKAT: Semantic Foundations for Networks},
+  year      = {2014},
+  isbn      = {9781450325448},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  abstract  = {Recent years have seen growing interest in high-level languages for programming networks. But the design of these languages has been largely ad hoc, driven more by the needs of applications and the capabilities of network hardware than by foundational principles. The lack of a semantic foundation has left language designers with little guidance in determining how to incorporate new features, and programmers without a means to reason precisely about their code.This paper presents NetKAT, a new network programming language that is based on a solid mathematical foundation and comes equipped with a sound and complete equational theory. We describe the design of NetKAT, including primitives for filtering, modifying, and transmitting packets; union and sequential composition operators; and a Kleene star operator that iterates programs. We show that NetKAT is an instance of a canonical and well-studied mathematical structure called a Kleene algebra with tests (KAT) and prove that its equational theory is sound and complete with respect to its denotational semantics. Finally, we present practical applications of the equational theory including syntactic techniques for checking reachability, proving non-interference properties that ensure isolation between programs, and establishing the correctness of compilation algorithms.},
+  booktitle = {Proceedings of the 41st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+  pages     = {113–126},
+  numpages  = {14},
+  keywords  = {frenetic, kleene algebra with tests, network programming languages, domain-specific languages, software-defined networking, netkat},
+  location  = {San Diego, California, USA},
+  series    = {POPL '14}
+}
+
+@article{horus,
+  author     = {van Renesse, Robbert and Birman, Kenneth P. and Maffeis, Silvano},
+  title      = {Horus: A Flexible Group Communication System},
+  year       = {1996},
+  issue_date = {April 1996},
+  publisher  = {Association for Computing Machinery},
+  address    = {New York, NY, USA},
+  volume     = {39},
+  number     = {4},
+  issn       = {0001-0782},
+  journal    = {Commun. ACM},
+  month      = apr,
+  pages      = {76–83},
+  numpages   = {8}
+}
+
+
